@@ -67,7 +67,7 @@ It does **not** accept typos or incorrect inputs because accuracy is critical.
 
 The default URL is a placeholder article about AI — you can replace it with **any article URL** you need information on.  
 
-You can also use this tool to **summarize articles** or extract detailed information from the content you provide.
+You can also use this tool to **summarize articles, extract detailed information or ask questions** from the content you provide.
 """)
 
 if 'messages' not in st.session_state:
