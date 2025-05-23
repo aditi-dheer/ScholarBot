@@ -1,0 +1,17 @@
+streamlit
+langchain
+langchain-community
+pydantic
+google.generativeai
+transformers
+sentence-transformers
+faiss-cpu
+bs4
+hf_xet
+torch
+langchain-huggingface
+LLM
+beautifulsoup4
+requests
+tqdm
+huggingface_hub

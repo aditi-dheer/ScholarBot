@@ -1,7 +1,7 @@
 # import langchain dependencies
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.chains import RetrievalQA
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.llms.base import LLM
 from langchain_community.vectorstores import FAISS
@@ -38,7 +38,7 @@ def load_website_data(url):
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     docs = text_splitter.split_documents(documents)
-    embeddings = HuggingFaceEmbeddings()
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     vectorstore = FAISS.from_documents(docs, embeddings)
     return vectorstore
 
